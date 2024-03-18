@@ -5,7 +5,7 @@ async function getAluno(){
 }
 
 async function postAluno(nome, rg, cpf, dataNasc){
-    conexao = await fetch('http://127.0.0.1:8000/alunos/',{
+    const conexao = await fetch('http://127.0.0.1:8000/alunos/',{
         method:'POST',
         headers:{
             'Content-type':'application/json'
@@ -14,14 +14,14 @@ async function postAluno(nome, rg, cpf, dataNasc){
             nome: nome,
             rg: rg, 
             cpf: cpf,
-            dataNasc: dataNasc,
+            data_nascimento: data_nascimento,
         })
     })
     const retornoJson = await conexao.json()
     return retornoJson
 }
 
-export const exportarConexao = {
+export const conexaoAPI = {
     getAluno,
     postAluno   
 }

@@ -142,5 +142,5 @@ REST_FRAMEWORK = {
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://localhost:3000"
+    "https://localhost:5501"
 ]
