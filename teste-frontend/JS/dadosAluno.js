@@ -1,9 +1,10 @@
 import { conexaoAPI } from "./conexaoAPI.js";
 const containerDados = document.querySelector('[data-aluno]')
-const botaoEnvio = document.querySelector('[data-botao-envio]')
+const botaoVer = document.querySelector('[data-ver]')
+
 async function listarDados(){
     const alunoDados = await conexaoAPI.getAluno()
-    alunoDados.array.forEach(aluno => {
+    alunoDados.forEach(aluno => {
         containerDados.innerHTML =
         `
         <li class="dado__aluno">
@@ -16,4 +17,4 @@ async function listarDados(){
     });
 }
 
-botaoEnvio.addEventListener('click', async () => await conexaoAPI.postAluno(), listarDados())
+botaoVer.addEventListener('click', async () => await listarDados())
