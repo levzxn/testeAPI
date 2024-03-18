@@ -1,11 +1,11 @@
 async function getAluno(){
-    const conexao = await fetch('url-da-api')
+    const conexao = await fetch('http://127.0.0.1:8000/alunos/')
     const retornoJson = await conexao.json()
     return retornoJson
 }
 
 async function postAluno(nome, rg, cpf, dataNasc){
-    conexao = await fetch('url-da-api',{
+    conexao = await fetch('http://127.0.0.1:8000/alunos/',{
         method:'POST',
         headers:{
             'Content-type':'application/json'
