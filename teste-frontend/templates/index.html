@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testeAPI</title>
+</head>
+<body>
+    <form class="container__formulario" data-formulario>
+        <h2 class="formulario__titulo">Cadastre um aluno!</h3>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="nome">Nome do aluno</label>
+                <input name="nome" class="campo__escrita" required
+                    placeholder="Digite o seu nome" id='nome' data-nome/>
+            </div>
+
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta">RG do Aluno</label>
+                <input name="nome" class="campo__escrita" required placeholder="Digite o seu rg"
+                    id='rg' data-rg/>
+            </div>
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta">CPF do aluno</label>
+                <input name="cpf" class="campo__escrita" required placeholder="Digite o seu CPF"
+                    id='cpf' data-cpf/>
+            </div>
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta">Data de nascimento</label>
+                <input name="data-nascimento" class="campo__escrita" required placeholder="Data de nascimento"
+                    id='cpf' data-dataNasc/>
+            </div>
+        <input class="formulario__botao" type="submit" data-botao-envio/>
+    </form>
+    <div class="retorno__aluno">
+        <ul class="dados__aluno" data-aluno>
+
+        </ul>
+    </div>
+    <script src="../JS/dadosAluno.js" type="module"></script>
+</body>
+</html>
